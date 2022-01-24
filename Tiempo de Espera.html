@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo Espera</title>
+    <style>
+        body{
+            margin: 0;
+            background: rgb(121, 120, 120);
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            margin: 2vw;
+            width: 5vw;
+            
+            
+            
+        }
+        .tipografia{
+            color: rgb(243, 243, 243);
+        }
+        
+        .nav{
+            display: flex;
+            background: rgb(31, 30, 31);
+            width: 30vw;
+            height: 3vw;
+            
+            border: solid 2px;
+            margin: 2;
+            border-color: rgb(180, 231, 229);
+           
+        }
+        .nav li ul{
+           display: block;
+           opacity: 0;
+           position: absolute;
+           /*para la demora */
+           transition: opacity 400ms;
+           transition-delay: 300ms;
+        }
+        /*indica que si le doy a hover solo abra el hijo directo*/
+        .nav li:hover > ul{
+            opacity: 1;
+            transition: opacity 400ms;
+            transition-delay: 300ms;
+        }
+
+
+        /*similar al anterior .nav li ul{}*/
+        .nav li ul li{
+           position: relative;
+           margin-top: 3vw;
+        }
+        .nav li ul li{
+           right: -10px;
+        }
+
+        /*experimento*/
+        .nav2{
+            
+            background: rgb(31, 30, 31);
+            width: auto;
+            height: 3vw;
+            shador: 10px black;
+            border: solid 2px;
+            
+            border-color: rgb(180, 231, 229);
+        }
+
+        .nav3{
+            
+            background: rgb(31, 30, 31);
+            width: auto;
+            height: 3vw;
+            shador: 10px black;
+            border: solid 2px;
+            
+            border-color: rgb(180, 231, 229);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <ul class= "nav">
+        <li><a class= "tipografia" href="/">Mujeres</a>
+            <ul>
+                <li class= "nav2"><a class= "tipografia" href="/">Camisetas</a></li>
+                <li class= "nav2"><a class= "tipografia" href="/">Pantalones</a></li>
+                <li class= "nav2"><a class= "tipografia" href="/">Shorts</a>
+                    <ul>
+                        <li class= "nav3"><a class= "tipografia" href="/">Cortos</a></li>
+                        <li class= "nav3"><a class= "tipografia" href="/">Largos</a></li>
+                        <li class= "nav3"><a class= "tipografia" href="/">Deportivos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a class= "tipografia" href="/">Hormbres</a></li>
+        <li><a class= "tipografia" href="/">Ninos</a></li>
+    </ul>
+</body>
+</html>
